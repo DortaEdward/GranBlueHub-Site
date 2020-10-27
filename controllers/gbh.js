@@ -14,7 +14,6 @@ router.get('/', (req,res)=>{
 // Show Route
 router.get('/characters', (req,res) =>{
     Character.find({},(error, allCharacters)=>{
-        console.log(allCharacters)
         res.render('show.ejs',{
             characters : allCharacters
         })

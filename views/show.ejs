@@ -3,20 +3,24 @@
     <head>
         <meta charset="utf-8">
         <title>Granblue hub</title>
+        <link rel="stylesheet" href="/css/showpage.css">
     </head>
     <body>
         <div class="container">
             <%- include ('./partials/header.ejs') %>
-        </div>
-        <div class="character-section">
-            <ul>
-                <% for (let i = 0; i < characters.length; i++) {%>
-                    <li>
-                        <h1><%= characters[i].name%></h1>
-                        <img src= <%= characters[i].img%> alt="">
-                    </li>
-                <% } %>
-            </ul>
+            <div class="character-container">
+                <div class="character-section">
+                    <ul>
+                        <% for (let i = 0; i < characters.length; i++) {%>
+                            <li>
+                                <a href="/gbh/<%=characters[i].id%>"><img src= <%= characters[i].img%> alt="" class='character-potrait'></a>
+                            </li>
+                        <% } %>
+                    </ul>
+
+                </div>
+
+            </div>
 
         </div>
     </body>
