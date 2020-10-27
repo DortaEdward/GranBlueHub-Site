@@ -22,6 +22,7 @@ app.use(express.static('public'))
 // body parser
 const bodyParser = require('body-parser')
 
+app.use(express.urlencoded({extended:true}));
 
 // establish connection with mongoose
 mongoose.connect(mongodbURI, {
@@ -32,7 +33,10 @@ mongoose.connect(mongodbURI, {
   console.log('Mongoose Connected');
 });
 
+
 // port listener
 app.listen(PORT, ()=>{
     console.log('Server is running on Port: ' + PORT)
 })
+
+module.exports = router;
