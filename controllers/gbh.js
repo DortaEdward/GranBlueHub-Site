@@ -11,6 +11,10 @@ router.get('/', (req,res)=>{
     res.render('homepage.ejs')
 })
 
+router.get('/basics', (req,res)=>{
+    res.render('basics.ejs')
+})
+
 // Show Route
 router.get('/characters', (req,res) =>{
     Character.find({},(error, allCharacters)=>{
@@ -23,17 +27,14 @@ router.get('/characters', (req,res) =>{
 // Index route
 router.get('/:id', (req,res) =>{
     Character.findById(req.params.id ,(error,char)=>{
-        res.send(char)
+        res.render('index.ejs',{
+            character: char
+        })
     })
 })
 
-// Character.findOneAndUpdate({name:'Zooey'}, {img:'/img/headshots/zooey-headshot.png'},(err,char)=>{
-//     if(err){
-//         console.log(err)
-//     }else{
-//         console.log('Done')
-//     }
-// })
+
+
 
 
 module.exports = router;

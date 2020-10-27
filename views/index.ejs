@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Granblue hub</title>
+        <link rel="stylesheet" href="/css/indexpage.css">
+    </head>
+    <body>
+        <div class="container">
+            <%- include ('./partials/header.ejs') %>
+            <div class="char-section">
+                <div class="char-apperence">
+                    <h1><%= character.name%></h1>
+                    <img src=<%= character.img%> alt="">
+                </div>
+                <div class="char-description">
+                    <p><%= character.description%></p>
+                </div>
+            </div>
+            <div class="combo-section">
+                <p><%= character.combos%></p>
+            </div>
+
+        </div>
+
+
+
+
+    </body>
+</html>
+
+<!-- need to update video links -->
+<!-- <iframe width="415" height="240" src="https://www.youtube.com/embed/5UWaXdMtX_Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
