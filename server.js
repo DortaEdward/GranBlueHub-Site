@@ -13,16 +13,14 @@ const db = mongoose.connection;
 
 // router
 const router = express.Router();
+
+// sessions
+const session = require('express-session')
+
+// controllers
 const gbhController = require('./controllers/gbh.js');
-app.use('/gbh',gbhController);
-
-// using static files
-app.use(express.static('public'))
-
-// body parser
-const bodyParser = require('body-parser')
-
-app.use(express.urlencoded({extended:true}));
+const userController = require('./controllers/users_controller.js')
+const sessionsController = require('./controllers/sessions_controller.js')
 
 // establish connection with mongoose
 mongoose.connect(mongodbURI, {
@@ -33,9 +31,36 @@ mongoose.connect(mongodbURI, {
   console.log('Mongoose Connected');
 });
 
+
+// body parser
+const bodyParser = require('body-parser')
+const methodOverride = require('method-override')
+app.use(methodOverride('_method'))
+app.use(express.urlencoded({extended:true}));
+
+// sessions middleware
+app.use(session({
+        secret: process.env.SECRET,
+        resave: false,
+        saveUninitialized: false
+        })
+)
+
+// using static files
+app.use(express.static('public'))
+
+
+
+
+
+
+app.use('/gbh',gbhController);
+
 // user controller
-const userController = require('./controllers/users_controller.js')
 app.use('/users', userController)
+
+// session controller
+app.use('/sessions', sessionsController)
 
 
 
@@ -45,6 +70,23 @@ app.listen(PORT, ()=>{
 })
 
 module.exports = router;
+
+// <% if(currentUser){ %>
+// <li>
+//     <form action="/sessions?_method=DELETE" method="POST">
+//         <input type="submit" value="Log Out">
+//     </form>
+// </li>
+// <%} else{ %>
+//     <li><a href="/users/login">Log in/ Sign In</a></li>
+// <% } %>
+
+
+
+
+
+
+
 
 
 // <form class="request-form" action="/gbh" method="POST">

@@ -9,7 +9,7 @@
 
 body{
     font-family: 'Montserrat', sans-serif;
-    
+
 }
 
 nav{
@@ -95,19 +95,20 @@ input{
     border:none;
     font-weight: bold;
     color:white;
-    padding:10px 20px;
+    padding:5px 20px;
     border-radius: 20px;
 }
 
 .log-in-button{
+    height: 35px;
+    margin: 20px 0;
     cursor: pointer;
     font-size: 20px;
     text-decoration: none;
-    background-color: #10C9DE;
     border:none;
     font-weight: bold;
     color:white;
-    padding:10px 20px;
+    padding:5px 20px;
     border-radius: 20px;
     text-decoration: none;
     background-color: lightgrey;

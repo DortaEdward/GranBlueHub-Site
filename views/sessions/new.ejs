@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Granblue Hub</title>
+        <link rel="stylesheet" href="/css/logIn.css">
+    </head>
+    <body>
+        <div class="container">
+            <%- include ('../partials/header.ejs') %>
+            <div class="loginPage">
+                <h1 class="text">Log In</h1>
+                <form class="text" action="/sessions" method="POST">
+                    <fieldset class="form-div">
+                        <label for="username" class="form-labels">Username:</label>
+                        <input type="text" name="username">
+                    </fieldset>
+                    <fieldset class="form-div">
+                        <label for="password" class="form-labels">Password:</label>
+                        <input type="password" name="password">
+                    </fieldset>
+
+                    <input class="sign-up-btn" type="submit" name="" value="Log In">
+                </form>
+            </div>
+
+        </div>
+
+    </body>
+</html>
