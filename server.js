@@ -62,15 +62,9 @@ app.use('/users', userController)
 // session controller
 app.use('/sessions', sessionsController)
 
-
-
-
 // port listener
 app.listen(PORT, ()=>{
     console.log('Server is running on Port: ' + PORT)
 })
 
 module.exports = router;
-
-
-//<button type="button" name="button" class="join-btn">Remove</button>
