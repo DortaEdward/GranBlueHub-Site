@@ -117,8 +117,7 @@ router.get('/seed',(req,res)=>{
             img: '/img/headshots/lowain-headshot.png',
             description: "A free spirit who was all about his part-time job, a good gab sesh with the boys, and a dash of adventure every now and then. That all changed when Katalina visited the restaurant where he worked. It was infatuation at first sight. Determined to follow her, he quit his job and began a new life as the cook on Gran's crew.\n" +
               "            He's a fair hand with a dagger, but with his buddies Elsam and Tomoi there to run interference and baffle opponents, he can really ruin an enemy's day... probably.",
-            link: 'https://youtube.com/embed/qpdaLDkpOZg',
-            __v: 0
+            link: 'https://youtube.com/embed/qpdaLDkpOZg'
           },
           {
             name: 'Metera',
@@ -172,7 +171,9 @@ router.get('/seed',(req,res)=>{
               '            With swordsmanship beyond mortal capabilities and lightning magic at her command, as well as the aid of her faithful dragons Dyrn and Lyrn, she will ensure balance is upheld.',
             link: 'https://youtube.com/embed/jLZCk6o_PJ0'
           }
-        ]
+      ], (err,data)=>{
+          res.redirect('/gbh')
+      }
     )
 })
 
