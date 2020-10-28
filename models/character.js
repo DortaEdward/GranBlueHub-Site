@@ -4,7 +4,6 @@ const characterSchema = new Schema({
     name: {type: String, require: true},
     img: {type: String, require:true},
     description: {type:String, require:true},
-    combos: {type:String, require:true},
     link: {type:String, require:true}
 })
 
