@@ -131,7 +131,7 @@ input {
 }
 
 .video-details{
-    margin:0;
+    margin:0 auto;
     padding-top: 40px;
     width:340px;
 }

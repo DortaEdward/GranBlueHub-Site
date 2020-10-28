@@ -52,9 +52,11 @@ app.use(express.static('public'))
 
 
 
+app.get('/',(req,res)=>{
+    res.redirect('/gbh')
+})
 
-
-
+// homepage controller
 app.use('/gbh',gbhController);
 
 // user controller
