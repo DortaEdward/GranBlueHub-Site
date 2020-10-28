@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Granblue hub</title>
+        <link rel="stylesheet" href="/css/showpage.css">
+    </head>
+    <body>
+        <div class="container">
+            <%- include ('../partials/header.ejs') %>
+
+            <form class="request-form" action="/gbh" method="POST">
+                <fieldset>
+                    <label for="">Username</label>
+                    <input type="text" name="username" value="">
+                </fieldset>
+                <fieldset>
+                    <label for="platform">Platform</label>
+                    <select class="" name="platform">
+                        <option value="">Steam</option>
+                        <option value="">Playstaion 4</option>
+                    </select>
+                </fieldset>
+                <input type="submit" value="Add Lobby" class='join-btn'>
+            </form>
+
+        </div>
+    </body>
+</html>

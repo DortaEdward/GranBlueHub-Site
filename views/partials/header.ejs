@@ -11,7 +11,16 @@
             <li><a href="/gbh">Home</a></li>
             <li><a href="/gbh/characters">Characters</a></li>
             <li><a href="/gbh/basics">Basics</a></li>
-            <li><a href="/sessions/new">Log in/ Sign In</a></li>
+            <% if(currentUser){ %>
+            <li>
+                <a href="#"><%= currentUser.username %></a>
+                <form action="/sessions?_method=DELETE" method="POST">
+                    <input type="submit" value="Log Out">
+                </form>
+            </li>
+            <%} else{ %>
+                <li><a href="/sessions/new">Log in/ Sign In</a></li>
+            <% } %>
 
         </ul>
     </nav>

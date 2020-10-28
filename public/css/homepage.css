@@ -61,6 +61,7 @@ nav ul li{
 }
 
 .card-section{
+    margin:0 auto;
     padding:0.8em 1.2em;
 }
 
@@ -73,7 +74,7 @@ nav ul li{
 .card-content{
     text-align: center;
     background-color: #e5e5e5;
-    width: 360px;
+    width: 480px;
     height: 626px;
     border-radius: 20px;
 }

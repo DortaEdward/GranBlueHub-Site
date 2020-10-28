@@ -64,6 +64,7 @@ app.use('/sessions', sessionsController)
 
 
 
+
 // port listener
 app.listen(PORT, ()=>{
     console.log('Server is running on Port: ' + PORT)
@@ -71,37 +72,5 @@ app.listen(PORT, ()=>{
 
 module.exports = router;
 
-// <% if(currentUser){ %>
-// <li>
-//     <form action="/sessions?_method=DELETE" method="POST">
-//         <input type="submit" value="Log Out">
-//     </form>
-// </li>
-// <%} else{ %>
-//     <li><a href="/users/login">Log in/ Sign In</a></li>
-// <% } %>
 
-
-
-
-
-
-
-
-
-// <form class="request-form" action="/gbh" method="POST">
-//     <fieldset>
-//         <label for="">Name</label>
-//         <input type="text" name="" value="">
-//     </fieldset>
-//     <fieldset>
-//         <label for="">Platform</label>
-//         <select class="" name="">
-//             <option value="">Steam</option>
-//             <option value="">Playstaion 4</option>
-//         </select>
-//     </fieldset>
-//
-//     <input type="submit" name="" value="Add Lobby" class='join-btn'>
-// </form>
-//                                     <button type="button" name="button" class="join-btn">Remove</button>
+//<button type="button" name="button" class="join-btn">Remove</button>

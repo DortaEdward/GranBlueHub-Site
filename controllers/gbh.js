@@ -3,8 +3,10 @@ const router = express.Router();
 const mongoose = require('mongoose');
 const Character = require('../models/character.js');
 const User = require('../models/user.js');
+const Lobby = require('../models/lobbys.js');
 
 // middleware
+
 
 
 // Home route
@@ -12,13 +14,22 @@ router.get('/', (req,res)=>{
     res.render('./characters/homepage.ejs',{currentUser: req.session.currentUser})
 })
 
-// ,{
-//     currentUser: req.session.currentUser
-// }
+// add lobby route
+router.get('/add-lobby',(req,res)=>{
+    res.render('./lobby/new.ejs',{currentUser: req.session.currentUser})
+})
 
 router.get('/basics', (req,res)=>{
     res.render('./characters/basics.ejs',{currentUser: req.session.currentUser})
 })
+
+router.post('/',(req,res)=>{
+    Lobby.create(req.body, (error, createdLobby)=>{
+        console.log(createdLobby)
+        res.redirect('/gbh')
+    })
+})
+
 
 // Show Route
 router.get('/characters', (req,res) =>{
@@ -41,7 +52,7 @@ router.get('/:id', (req,res) =>{
     })
 })
 
-
+// Index route
 
 
 
