@@ -33,6 +33,11 @@ mongoose.connect(mongodbURI, {
   console.log('Mongoose Connected');
 });
 
+// user controller
+const userController = require('./controllers/users_controller.js')
+app.use('/users', userController)
+
+
 
 // port listener
 app.listen(PORT, ()=>{
@@ -40,3 +45,21 @@ app.listen(PORT, ()=>{
 })
 
 module.exports = router;
+
+
+// <form class="request-form" action="/gbh" method="POST">
+//     <fieldset>
+//         <label for="">Name</label>
+//         <input type="text" name="" value="">
+//     </fieldset>
+//     <fieldset>
+//         <label for="">Platform</label>
+//         <select class="" name="">
+//             <option value="">Steam</option>
+//             <option value="">Playstaion 4</option>
+//         </select>
+//     </fieldset>
+//
+//     <input type="submit" name="" value="Add Lobby" class='join-btn'>
+// </form>
+//                                     <button type="button" name="button" class="join-btn">Remove</button>

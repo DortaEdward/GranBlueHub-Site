@@ -31,6 +31,7 @@ nav{
 }
 
 header{
+    position: sticky;
     display: flex;
     justify-content: space-between;
     background-color: white;
@@ -75,6 +76,41 @@ nav ul li{
     width: 360px;
     height: 626px;
     border-radius: 20px;
+}
+
+.open-lobbies{
+    margin: 10px auto;
+    background-color: white;
+    width: 320px;
+    height: 85%;
+    border-radius: 20px;
+
+}
+
+
+fieldset{
+
+    border:none;
+}
+
+input {
+    border: none;
+}
+
+.lobby{
+    color: white;
+    background-color: #059FB1;
+    border-radius: 20px;
+}
+
+
+.join-btn{
+    background-color: #10C9DE;
+    border:none;
+    font-weight: bold;
+    color:white;
+    padding:10px 20px;
+    border-radius: 12px;
 }
 
 .video{

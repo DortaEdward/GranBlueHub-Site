@@ -8,5 +8,6 @@ const characterSchema = new Schema({
     link: {type:String, require:true}
 })
 
+
 const Character = mongoose.model('Character',characterSchema);
 module.exports = Character;

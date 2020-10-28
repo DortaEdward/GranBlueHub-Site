@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+nav{
+
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+.container{
+    text-align: center;
+}
+
+#logo{
+        width: 180px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    margin: 6px 0;
+}
+
+
+
+nav ul{
+    position: inherit;
+    width: auto;
+    background: none;
+    display: flex;
+    height: auto;
+    list-style: none;
+
+}
+nav ul li{
+    font-size: 20px;
+    padding: 0 10px;
+    float:left;
+}
+
+h1 {
+    color: darkgrey;
+}
+
+.log-in-form{
+    background-color: white;
+    margin: 100px auto;
+    padding: 100px 0;
+    width: 40%;
+    border: solid;
+    border-width: thin;
+    border-radius: 10px;
+    border-color: lightgrey;
+}
+
+.form-div{
+    border: none;
+    padding: 10px 0;
+}
+
+.form-labels{
+    font-size: 25px;
+}
+
+input{
+    border-radius: 10px;
+    border-width: thin;
+    height: 25px;
+    font-size: 20px;
+}
+
+
+
+.sign-up-btn{
+    font-size: 20px;
+    text-decoration: none;
+    background-color: #10C9DE;
+    border:none;
+    font-weight: bold;
+    color:white;
+    padding:10px 20px;
+    border-radius: 20px;
+}
+
+.log-in-button{
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: #10C9DE;
+    border:none;
+    font-weight: bold;
+    color:white;
+    padding:10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    background-color: lightgrey;
+    border:none;
+}
+
+.btns{
+    margin: 0 20px;
+}

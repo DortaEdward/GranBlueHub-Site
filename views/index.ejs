@@ -9,16 +9,23 @@
         <div class="container">
             <%- include ('./partials/header.ejs') %>
             <div class="char-section">
-                <div class="char-apperence">
-                    <h1><%= character.name%></h1>
-                    <img src=<%= character.img%> alt="">
-                </div>
-                <div class="char-description">
-                    <p><%= character.description%></p>
+                <div class="char-info">
+                    <div class="char-apperence">
+                        <h1><%= character.name%></h1>
+                        <% let name = character.name+'.png' %>
+                        <img src='/img/fullBody/<%= name %>' alt="">
+                    </div>
+                    <div class="char-description">
+                        <h3>Description</h3>
+                        <p><%= character.description%></p>
+                    </div>
                 </div>
             </div>
-            <div class="combo-section">
-                <p><%= character.combos%></p>
+            <div class="combo-container">
+                <div class="combo-section">
+                    <h3>Combo Video</h3>
+                    <iframe src= <%= character.link %> width="710" height="410" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
             </div>
 
         </div>
@@ -28,6 +35,3 @@
 
     </body>
 </html>
-
-<!-- need to update video links -->
-<!-- <iframe width="415" height="240" src="https://www.youtube.com/embed/5UWaXdMtX_Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
