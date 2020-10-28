@@ -57,7 +57,7 @@ router.get('/:id', (req,res) =>{
 
 // Index route
 
-router.get('/seed',(req,res)=>{
+router.get('/gbh/seed',(req,res)=>{
     Character.create(
         [
           {
