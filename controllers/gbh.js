@@ -11,7 +11,15 @@ const Lobby = require('../models/lobbys.js');
 
 // Home route
 router.get('/', (req,res)=>{
-    res.render('./characters/homepage.ejs',{currentUser: req.session.currentUser})
+    Lobby.find({},(error, allLobbies)=>{
+        console.log(allLobbies)
+        res.render('./characters/homepage.ejs',{
+            currentUser: req.session.currentUser,
+            lobbies: allLobbies
+        })
+
+    })
+
 })
 
 // add lobby route
@@ -23,12 +31,7 @@ router.get('/basics', (req,res)=>{
     res.render('./characters/basics.ejs',{currentUser: req.session.currentUser})
 })
 
-router.post('/',(req,res)=>{
-    Lobby.create(req.body, (error, createdLobby)=>{
-        console.log(createdLobby)
-        res.redirect('/gbh')
-    })
-})
+
 
 
 // Show Route

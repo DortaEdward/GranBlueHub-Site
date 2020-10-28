@@ -100,7 +100,17 @@ input {
 
 .lobby{
     color: white;
+    border-radius: 20px;
+}
+.lobby ul{
+    overflow-y: auto;
+}
+
+.lobby li{
     background-color: #059FB1;
+    margin: 5px 0;
+    padding: 5px 0;
+    list-style: none;
     border-radius: 20px;
 }
 
@@ -138,18 +148,4 @@ h2{
     background-color:#10C9DE;
     height:480px;
 
-}
-
-.updates h1{
-    padding-top:40px;
-    padding-bottom: 40px;
-    color: white
-
-}
-
-.updates-section{
-    margin:0 auto;
-    width: 80%;
-    height: 300px;
-    background-color: #059FB1;
 }

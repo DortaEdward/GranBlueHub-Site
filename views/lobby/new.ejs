@@ -9,17 +9,14 @@
         <div class="container">
             <%- include ('../partials/header.ejs') %>
 
-            <form class="request-form" action="/gbh" method="POST">
+            <form class="request-form" action="/lobby/add-lobby" method="POST">
                 <fieldset>
                     <label for="">Username</label>
                     <input type="text" name="username" value="">
                 </fieldset>
                 <fieldset>
                     <label for="platform">Platform</label>
-                    <select class="" name="platform">
-                        <option value="">Steam</option>
-                        <option value="">Playstaion 4</option>
-                    </select>
+                    <input type="text" name="platform" value="">
                 </fieldset>
                 <input type="submit" value="Add Lobby" class='join-btn'>
             </form>
