@@ -50,8 +50,7 @@ app.use(session({
 // using static files
 app.use(express.static('public'))
 
-
-
+// default route
 app.get('/',(req,res)=>{
     res.redirect('/gbh')
 })
