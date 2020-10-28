@@ -14,7 +14,7 @@ router.get('/', (req,res)=>{
     Lobby.find({},(error, allLobbies)=>{
         res.render('./characters/homepage.ejs',{
             currentUser: req.session.currentUser,
-            // lobbies: allLobbies
+            lobbies: allLobbies
         })
 
     })
