@@ -5,7 +5,8 @@ This is a site where players can open and find lobbies to play the game Granblue
 Link: <https://granblue-hub.herokuapp.com/gbh>
 
 **Wirerames**
-Link: <https://github.com/Aaquino169/MyFlix/blob/61d16ce675919ba443afe9052b80a21a714481e1/Wireframe.jpg>
+<img width="599" alt="Screen Shot 2020-10-29 at 9 16 38 AM" src="https://user-images.githubusercontent.com/36967906/97579061-fc7a6c80-19c7-11eb-9b6a-95e36e173acd.png">
+
 **User Story**
 - On the homepage the user will see lobbies that are open and a featured video
 - In order to be able to see lobbies the user will need to log in 
