@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Granblue Fantasy Versus Hub</title>
+        <link rel="stylesheet" href="/css/logIn.css">
+    </head>
+    <body>
+        <div class="container">
+            <%- include ('../partials/header.ejs') %>
+            <div class="char-section">
+                <form class="request-form" action="/gbh/<%= character.id %>?_method=PUT" method="POST">
+
+                    <fieldset>
+                        <label for="name"></label>
+                        <input type="text" name="name" value="<%= character.name%>">
+                    </fieldset>
+                    <fieldset>
+                        <label for="story"></label>
+                        <input class='char-description' type="text" name="story" value="<%= character.description%>">
+                    </fieldset>
+                    <fieldset>
+                        <label for="link"></label>
+                        <input type="text" name="link" value="<%= character.link%>">
+                    </fieldset>
+                    <input type="submit" value="Submit Changed">
+
+                </form>
+        </div>
+
+
+
+
+    </body>
+</html>

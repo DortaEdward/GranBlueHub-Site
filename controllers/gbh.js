@@ -31,6 +31,35 @@ router.get('/basics', (req,res)=>{
     })
 })
 
+router.get('/:id/edit', (req,res)=>{
+    Character.findById(req.params.id,(error,updatedCharacter)=>{
+        if(error){
+            console.log(error)
+        }else{
+            res.render(
+                './characters/edit.ejs',
+                {
+                    character : updatedCharacter,
+                    currentUser: req.session.currentUser
+                }
+            )
+        }
+
+    })
+})
+
+
+router.put('/:id', (req,res)=>{
+    Character.findByIdAndUpdate(req.params.id, req.body, {new: true},(error,updatedCharacter)=>{
+            if(error){
+                console.log(error)
+            }else{
+                
+                res.redirect('/gbh')
+            }
+
+    })
+})
 
 // Show Route
 router.get('/characters', (req,res) =>{
@@ -54,7 +83,6 @@ router.delete('/delete/:id',(req,res)=>{
 
     })
 })
-
 
 
 

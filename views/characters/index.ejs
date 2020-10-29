@@ -25,8 +25,14 @@
                 <div class="combo-section">
                     <h3>Combo Video</h3>
                     <iframe src= <%= character.link %> width="710" height="410" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <% if(currentUser && currentUser.username === 'dorta') {%>
+                    <div class="">
+                        <a href="/gbh/<%= character.id%>/edit ">Edit Character</a>
+                    </div>
+                    <% } %>
                 </div>
             </div>
+
 
         </div>
 
