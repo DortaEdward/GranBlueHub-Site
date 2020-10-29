@@ -51,7 +51,8 @@
                                     </ul>
                                 </div>
                                 <% if (!currentUser) {%>
-                                    <a href="/users/signup" class="add-lobby">Sign Up</a>
+                                    <h4>In order to see lobbies you must log in</h4>
+                                    <a href="/sessions/new" class="add-lobby">Sign Up</a>
                                 <% }else { %>
                                     <a href="/lobby/add-lobby" class="add-lobby">+ Add a Lobby</a>
                                 <% } %>
@@ -62,7 +63,7 @@
 
                 </div>
             </section>
-            
+
         </div>
     </body>
 </html>
