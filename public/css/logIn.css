@@ -55,11 +55,21 @@ nav ul li{
     float:left;
 }
 
+.user-log-out{
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
 h1 {
     color: darkgrey;
 }
 
-.log-in-form{
+.request-form{
     background-color: white;
     margin: 100px auto;
     padding: 100px 0;
@@ -70,13 +80,23 @@ h1 {
     border-color: lightgrey;
 }
 
+.request-form h1{
+    color: #10C9DE;
+}
+
 .form-div{
     border: none;
     padding: 10px 0;
 }
 
+fieldset{
+    border:none;
+    padding:10px 0;
+}
+
 .form-labels{
     font-size: 25px;
+
 }
 
 input{

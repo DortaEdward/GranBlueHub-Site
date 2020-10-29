@@ -14,9 +14,7 @@ users.get('/signup', (req,res)=>{
 users.post('/', (req,res)=>{
     req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10))
     User.create(req.body,(error, createdUser)=>{
-        console.log(createdUser)
-        console.log('New User is created ')
-        res.redirect('/gbh')
+        res.redirect('/sessions/new')
     })
 })
 

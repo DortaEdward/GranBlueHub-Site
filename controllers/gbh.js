@@ -4,18 +4,17 @@ const mongoose = require('mongoose');
 const Character = require('../models/character.js');
 const User = require('../models/user.js');
 const Lobby = require('../models/lobbys.js');
-const Video = require('../models/video.js')
 
 
 
 // Home route
 router.get('/', (req,res)=>{
-    Lobby.find({},(error, allLobbies)=>{
-        res.render('./characters/homepage.ejs',{
-            currentUser: req.session.currentUser,
-            lobbies: allLobbies
+        Lobby.find({},(error, allLobbies)=>{
+                res.render('./characters/homepage.ejs',{
+                    currentUser: req.session.currentUser,
+                    lobbies: allLobbies,
+                })
         })
-    })
 })
 
 // Lobby Route
@@ -43,6 +42,21 @@ router.get('/characters', (req,res) =>{
         })
     })
 })
+
+router.delete('/delete/:id',(req,res)=>{
+    Lobby.findByIdAndRemove(req.params.id,(error,data)=>{
+        if(error){
+            console.log(error)
+        }else{
+            console.log(data)
+            res.redirect('/gbh')
+        }
+
+    })
+})
+
+
+
 
 // Index Route
 router.get('/:id', (req,res) =>{

@@ -23,6 +23,8 @@ const userController = require('./controllers/users_controller.js')
 const sessionsController = require('./controllers/sessions_controller.js')
 const lobbyController = require('./controllers/lobby_controller.js')
 
+
+
 // establish connection with mongoose
 mongoose.connect(mongodbURI, {
   useFindAndModify: false,
@@ -66,6 +68,7 @@ app.use('/sessions', sessionsController)
 
 // lobby controller
 app.use('/lobby', lobbyController)
+
 
 // port listener
 app.listen(PORT, ()=>{
