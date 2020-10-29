@@ -31,6 +31,7 @@ nav{
 }
 
 header{
+    position: sticky;
     display: flex;
     justify-content: space-between;
     background-color: white;

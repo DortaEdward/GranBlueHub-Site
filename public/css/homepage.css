@@ -126,13 +126,14 @@ input {
 
 .video{
     padding-top: 40px;
-    width: 320px;
+    width: 360px;
     height:240px;
 }
 
 .video-details{
+    font-size: 25px;
     margin:0 auto;
-    padding-top: 40px;
+    padding-top: 20px;
     width:340px;
 }
 

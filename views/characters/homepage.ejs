@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title>Granblue Fantasy Versus Hub</title>
         <link rel="stylesheet" href="/css/homepage.css">
+        <script src="/scripts/app.js"></script>
     </head>
     <body>
         <div class="container">
@@ -18,9 +19,10 @@
                     <div class="featured-video card-section">
                         <div class="card-content">
                             <h1>Featured Video</h1>
-                            <img src="/img/landingImage.png" alt="" class="video">
-                            <h2 class="video-details">GO1 VS Fenrich</h2>
-                            <p class="video-details">Description</p>
+                            <iframe class="video" src="https://www.youtube.com/embed/udw9jGsdnNg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <h2 class="video-details">Yoritomo (Cagliostro) Vs Elsword (Narmaya)</h2>
+                            <h3 class="video-details">Title</h3>
+                            <p class="video-details">Granblue Fantasy Versus Season 2 Yoritomo (Cagliostro) Vs Elsword (Narmaya) FT2!!【GBVS】グラブルVS</p>
                         </div>
                     </div>
                     <div class="card-section">
@@ -34,9 +36,10 @@
                                             <li>
                                                 <h4><%= lobbies[i].username %></h4>
                                                 <h4><%= lobbies[i].platform %></h4>
-                                                <button type="button" name="button" class="join-btn">Request To Join</button>
+                                                <button type="button" name="button" class="join-btn">Link</button>
                                                 <% if (currentUser && (currentUser.username === lobbies[i].username)) {%>
-                                                    <button type="button" name="button" class="join-btn">Remove</button>
+                                                    <button type="button" name="button" class="join-btn" onclick="remove(this)">Remove</button>
+
                                                 <% } %>
                                             </li>
 
